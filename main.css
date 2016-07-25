@@ -1,0 +1,142 @@
+@media screen and (max-width: 10cm) {
+	body > div {
+		margin: 0cm;
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 10cm) and (max-width: 20cm) {
+	body > div {
+		margin: 0.3cm 0cm 0cm 0.3cm;
+		width: calc(100% - 0.6cm);
+	}
+}
+
+@media screen and (min-width: 20cm) and (max-width: 30cm) {
+	body > div {
+		margin: 0.4cm 0cm 0cm 0.4cm;
+		width: calc(50% - 0.6cm);
+	}
+}
+
+@media screen and (min-width: 30cm) and (max-width: 50cm) {
+	body > div {
+		margin: 0.6cm 0cm 0cm 0.6cm;
+		width: calc(33% - 0.8cm);
+	}
+}
+
+@media screen and (min-width: 50cm) {
+	body > div {
+		margin: 1cm 0cm 0cm 1cm;
+		width: calc(25% - 1.25cm);
+	}
+}
+
+* {
+	font-family: Ubuntu;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #fef5ce;
+}
+
+body > div {
+	float: left;
+	transition: height 0.5s;
+}
+
+body > div {
+	background-color: #151616;
+}
+
+body > div > div.list {
+	max-height: 11cm;
+	transition: max-height 0.3s ease;
+	overflow: hidden;
+}
+
+body > div.collapsed > div.list, body > div.collapsed > div.search {
+	max-height: 0px;
+}
+
+body > div > div.list > div.item, body > div > div.title, body > div > div.search {
+	display: block;
+	float: none;
+	position: relative;
+	height: 1cm;
+	width: calc(100% - 1cm - 2px);
+	background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 40%, transparent 60%, transparent 100%);
+	background-color: #eed222;
+	color: #293542;
+	font-size: 15pt;
+	margin: 0px;
+	padding: 0px 0.5cm 0cm 0.5cm;
+	border-color: #aaaaaa;
+	border-style: solid;
+	border-width: 1px;
+	transition: margin-left 0.2s, padding-left 0.2s, max-height 0.3s ease;
+  	cursor: pointer;
+  	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	overflow: hidden;
+	max-height: 1cm;
+}
+
+body > div > div.list > div.item {
+	border-top-width: 0px;
+}
+
+body > div > div.title {
+	font-weight: bold;
+	border-bottom-width: 0px;
+	margin-bottom: 4px;
+}
+
+body > div > div.list > div.item.selected {
+	margin-left: 0.2cm;
+	padding-left: 0.3cm;
+}
+
+body > div > div.list > div.item:active, body > div > div.title:active {
+	background: linear-gradient(to bottom right, transparent, transparent 40%, rgba(255, 255, 255, 0.1) 60%, rgba(255, 255, 255, 0.1) 100%);
+	background-color: #eed222;
+}
+
+body > div > div.item > span, body > div > div.list > div.item > span, body > div > div.title > span, body > div > div.search > input {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+body > div > div.list > div.item > span + span {
+	right: 0.5cm;
+	color: #526a84;
+}
+
+body > div > div.title:hover {
+	margin-left: 0px;
+	padding-left:0.5cm;
+}
+
+div#warnings > div.popup {
+	display: block;
+	float: none;
+	min-height: 1cm;
+	background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 40%, transparent 60%, transparent 100%);
+	font-size: 15pt;
+	margin: 0px;
+	padding: 0.4cm;
+	padding-left: 0.5cm;
+	border-color: #aaaaaa;
+	border-style: solid;
+	border-width: 1px;
+}
+
+div#warnings > div.popup > button {
+	float: right;
+}
